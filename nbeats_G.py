@@ -3,6 +3,7 @@ from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 import numpy as np
 from typing import Tuple
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 class TimeSeriesDataset(Dataset):
     def __init__(self, data: np.ndarray, input_size: int, forecast_size: int):
@@ -84,10 +85,33 @@ def mase_loss(y_pred, y_true, y_train, seasonality=1):
     errors = t.abs(y_true - y_pred)
     return t.mean(errors / d)
 
+class EarlyStopping:
+    def __init__(self, patience=10, min_delta=0):
+        self.patience = patience
+        self.min_delta = min_delta
+        self.best_loss = None
+        self.counter = 0
+
+    def __call__(self, val_loss):
+        if self.best_loss is None:
+            self.best_loss = val_loss
+            return False
+        elif val_loss < self.best_loss - self.min_delta:
+            self.best_loss = val_loss
+            self.counter = 0
+            return False
+        else:
+            self.counter += 1
+            if self.counter >= self.patience:
+                return True
+            return False
+
 def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, lr=0.001, loss_fn='mse'):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     model = create_nbeats_g(input_size, forecast_size, num_blocks=3, layers_per_block=4, layer_size=128)
     optimizer = t.optim.Adam(model.parameters(), lr=lr)
+    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10, verbose=True)
+    early_stopping = EarlyStopping(patience=10, min_delta=0.001)
 
     if loss_fn == 'smape':
         loss_function = smape_loss
@@ -99,6 +123,7 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
         loss_function = t.nn.MSELoss()
 
     for epoch in range(epochs):
+        model.train()
         epoch_loss = 0
         for x_batch, y_batch in dataloader:
             optimizer.zero_grad()
@@ -107,7 +132,24 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-        print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss / len(dataloader)}")
+        epoch_loss /= len(dataloader)
+        print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss}")
+
+        model.eval()
+        val_loss = 0
+        with t.no_grad():
+            for x_batch, y_batch in dataloader:
+                y_pred = model(x_batch)
+                loss = loss_function(y_pred, y_batch)
+                val_loss += loss.item()
+        val_loss /= len(dataloader)
+        print(f"Validation Loss: {val_loss}")
+
+        scheduler.step(val_loss)
+
+        if early_stopping(val_loss):
+            print("Early stopping triggered")
+            break
 
     return model
 
