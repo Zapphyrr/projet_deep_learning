@@ -1,9 +1,8 @@
-from typing import Tuple
 import torch as t
+from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 import numpy as np
-from torch.utils.data import Dataset, DataLoader
-
+from typing import Tuple
 
 class TimeSeriesDataset(Dataset):
     def __init__(self, data: np.ndarray, input_size: int, forecast_size: int):
@@ -20,26 +19,26 @@ class TimeSeriesDataset(Dataset):
         y = self.data[idx + self.input_size:idx + self.input_size + self.forecast_size]
         return t.tensor(x, dtype=t.float32), t.tensor(y, dtype=t.float32)
 
-
 class NBeatsBlock(t.nn.Module):
     def __init__(self, input_size, theta_size: int, layers: int, layer_size: int):
         super().__init__()
         self.input_size = input_size
         self.forecast_size = theta_size - input_size
-        self.layers = t.nn.ModuleList([t.nn.Linear(input_size * 7, layer_size)] +  # Multiply by the number of features
-                                      [t.nn.Linear(layer_size, layer_size) for _ in range(layers - 1)])
-        self.basis_parameters = t.nn.Linear(layer_size, theta_size * 7)  # Multiply by the number of features
+        self.layers = t.nn.ModuleList([
+            t.nn.Linear(input_size * 7, layer_size)] +
+            [t.nn.Linear(layer_size, layer_size) for _ in range(layers - 1)]
+        )
+        self.basis_parameters = t.nn.Linear(layer_size, theta_size * 7)
 
     def forward(self, x: t.Tensor) -> Tuple[t.Tensor, t.Tensor]:
-        block_input = x.flatten(start_dim=1)  # Flatten the input to match the linear layer input size
+        block_input = x.flatten(start_dim=1)
         for layer in self.layers:
             block_input = t.relu(layer(block_input))
         theta = self.basis_parameters(block_input)
-        theta = theta.view(x.size(0), -1, 7)  # Reshape theta to match the original feature dimensions
+        theta = theta.view(x.size(0), -1, 7)
         backcast = theta[:, :self.input_size]
         forecast = theta[:, self.input_size:]
         return backcast, forecast
-
 
 class NBeats(t.nn.Module):
     def __init__(self, blocks: t.nn.ModuleList, forecast_size: int):
@@ -52,13 +51,11 @@ class NBeats(t.nn.Module):
         forecast = t.zeros(x.size(0), self.forecast_size, x.size(2)).to(x.device)
         for block in self.blocks:
             backcast, block_forecast = block(residuals)
-            #print(f"Residuals shape: {residuals.shape}, Backcast shape: {backcast.shape}")
             if backcast.shape != residuals.shape:
                 backcast = backcast[:, :residuals.shape[1], :residuals.shape[2]]
             residuals = residuals - backcast
             forecast = forecast + block_forecast[:, :self.forecast_size]
         return forecast
-
 
 def create_nbeats_g(input_size: int, forecast_size: int, num_blocks: int, layers_per_block: int, layer_size: int):
     blocks = t.nn.ModuleList([
@@ -68,7 +65,6 @@ def create_nbeats_g(input_size: int, forecast_size: int, num_blocks: int, layers
     ])
     return NBeats(blocks, forecast_size=forecast_size)
 
-
 def load_dataset(csv_path, input_size, forecast_size):
     df = pd.read_csv(csv_path, parse_dates=['date'])
     df = df.drop(columns=['date'])
@@ -76,19 +72,38 @@ def load_dataset(csv_path, input_size, forecast_size):
     data = (data - data.mean(axis=0)) / data.std(axis=0)
     return TimeSeriesDataset(data, input_size, forecast_size)
 
+def smape_loss(y_pred, y_true):
+    return 100 * t.mean(2 * t.abs(y_pred - y_true) / (t.abs(y_pred) + t.abs(y_true) + 1e-8))
 
-def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, lr=0.001):
+def mape_loss(y_pred, y_true):
+    return t.mean(t.abs((y_true - y_pred) / (y_true + 1e-8))) * 100
+
+def mase_loss(y_pred, y_true, y_train, seasonality=1):
+    n = y_train.size(0)
+    d = t.sum(t.abs(y_train[seasonality:] - y_train[:-seasonality])) / (n - seasonality)
+    errors = t.abs(y_true - y_pred)
+    return t.mean(errors / d)
+
+def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, lr=0.001, loss_fn='mse'):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     model = create_nbeats_g(input_size, forecast_size, num_blocks=3, layers_per_block=4, layer_size=128)
     optimizer = t.optim.Adam(model.parameters(), lr=lr)
-    loss_fn = t.nn.MSELoss()
+
+    if loss_fn == 'smape':
+        loss_function = smape_loss
+    elif loss_fn == 'mape':
+        loss_function = mape_loss
+    elif loss_fn == 'mase':
+        loss_function = lambda y_pred, y_true: mase_loss(y_pred, y_true, dataset.data)
+    else:
+        loss_function = t.nn.MSELoss()
 
     for epoch in range(epochs):
         epoch_loss = 0
         for x_batch, y_batch in dataloader:
             optimizer.zero_grad()
             y_pred = model(x_batch)
-            loss = loss_fn(y_pred, y_batch)
+            loss = loss_function(y_pred, y_batch)
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -96,9 +111,8 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
 
     return model
 
-
 if __name__ == "__main__":
     input_size = 7
     forecast_size = 12
     dataset = load_dataset("ETTm1.csv", input_size, forecast_size)
-    model = train_nbeats(dataset, input_size, forecast_size)
+    model = train_nbeats(dataset, input_size, forecast_size, loss_fn='smape')  # Change loss_fn as needed
