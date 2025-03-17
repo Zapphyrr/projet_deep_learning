@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from typing import Tuple
 from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.utils.tensorboard import SummaryWriter
 
 class TimeSeriesDataset(Dataset):
     def __init__(self, data: np.ndarray, input_size: int, forecast_size: int):
@@ -112,6 +113,7 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
     optimizer = t.optim.Adam(model.parameters(), lr=lr)
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10, verbose=True)
     early_stopping = EarlyStopping(patience=10, min_delta=0.001)
+    writer = SummaryWriter(log_dir=f"run")  # Initialize TensorBoard writer
 
     if loss_fn == 'smape':
         loss_function = smape_loss
@@ -134,6 +136,7 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
             epoch_loss += loss.item()
         epoch_loss /= len(dataloader)
         print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss}")
+        writer.add_scalar('Loss/train', epoch_loss, epoch)  # Log training loss to TensorBoard
 
         model.eval()
         val_loss = 0
@@ -144,6 +147,7 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
                 val_loss += loss.item()
         val_loss /= len(dataloader)
         print(f"Validation Loss: {val_loss}")
+        writer.add_scalar('Loss/val', val_loss, epoch)  # Log validation loss to TensorBoard
 
         scheduler.step(val_loss)
 
@@ -151,6 +155,7 @@ def train_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, 
             print("Early stopping triggered")
             break
 
+    writer.close()  # Close the TensorBoard writer
     return model
 
 if __name__ == "__main__":
