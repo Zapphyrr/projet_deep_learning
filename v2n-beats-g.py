@@ -196,6 +196,10 @@ def train_generic_nbeats(dataset, input_size, forecast_size, epochs=100, batch_s
             
             epoch_loss += loss.item()
             
+            # Ajouter le learning rate au TensorBoard
+            current_lr = scheduler.get_last_lr()[0]
+            writer.add_scalar('Learning_Rate', current_lr, epoch * len(dataloader) + dataloader._index)
+            
         epoch_loss /= len(dataloader)
         print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss}")
         writer.add_scalar('Loss/train', epoch_loss, epoch)
