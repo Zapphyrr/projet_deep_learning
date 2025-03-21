@@ -1,0 +1,968 @@
+dimitri@ZaphosTop:/mnt/c/Users/dimit/Desktop/projet_dl$ python3 v2n-beats-g.py 
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.001, 'num_blocks': 3}
+Epoch 1/50, Loss: 78.55442567573961
+Validation Loss: 61.786258410558666
+Epoch 2/50, Loss: 60.31856008086641
+Validation Loss: 59.74349763767835
+Epoch 3/50, Loss: 58.960220569103505
+Validation Loss: 57.983061033386356
+Epoch 4/50, Loss: 57.75740733161727
+Validation Loss: 57.2963565845035
+Epoch 5/50, Loss: 56.582396227704905
+Validation Loss: 56.73708289729909
+Epoch 6/50, Loss: 55.96199873716982
+Validation Loss: 56.271913118277546
+Epoch 7/50, Loss: 55.554865350539814
+Validation Loss: 54.67191644252938
+Epoch 8/50, Loss: 55.28114408218686
+Validation Loss: 53.961615897306515
+Epoch 9/50, Loss: 54.84747115887344
+Validation Loss: 54.1501588188914
+Epoch 10/50, Loss: 54.51092001284945
+Validation Loss: 54.40906582048423
+Epoch 11/50, Loss: 53.99546220896061
+Validation Loss: 53.44434554160001
+Epoch 12/50, Loss: 53.45644948511948
+Validation Loss: 53.39447139331468
+Epoch 13/50, Loss: 53.00716184166495
+Validation Loss: 52.0463403285046
+Epoch 14/50, Loss: 52.651527144119655
+Validation Loss: 52.41555216502021
+Epoch 15/50, Loss: 52.432591231020574
+Validation Loss: 52.04566391192734
+Epoch 16/50, Loss: 52.03904743397198
+Validation Loss: 51.76193161295503
+Epoch 17/50, Loss: 51.740981524475956
+Validation Loss: 51.589780444972924
+Epoch 18/50, Loss: 51.53616499099929
+Validation Loss: 50.788412883231736
+Epoch 19/50, Loss: 51.1542321839553
+Validation Loss: 50.99598124216865
+Epoch 20/50, Loss: 50.775981088222665
+Validation Loss: 50.39280072019732
+Epoch 21/50, Loss: 50.586870925644845
+Validation Loss: 50.707220848558826
+Epoch 22/50, Loss: 50.206152105208204
+Validation Loss: 49.794142697071706
+Epoch 23/50, Loss: 49.89050168605019
+Validation Loss: 49.320114473074014
+Epoch 24/50, Loss: 49.5769901149683
+Validation Loss: 49.04876321928959
+Epoch 25/50, Loss: 49.23184909322226
+Validation Loss: 48.56948253391736
+Epoch 26/50, Loss: 48.9041991243409
+Validation Loss: 48.27404233213475
+Epoch 27/50, Loss: 48.535227114874296
+Validation Loss: 47.89446204495163
+Epoch 28/50, Loss: 48.14880402472181
+Validation Loss: 47.67912668857361
+Epoch 29/50, Loss: 47.73231843296153
+Validation Loss: 47.24859222611442
+Epoch 30/50, Loss: 47.329415047267986
+Validation Loss: 46.90937343151652
+Epoch 31/50, Loss: 46.93826714295818
+Validation Loss: 46.49903255038791
+Epoch 32/50, Loss: 46.4600082050272
+Validation Loss: 46.14036438761516
+Epoch 33/50, Loss: 46.035915293708605
+Validation Loss: 45.31230099174506
+Epoch 34/50, Loss: 45.642814835015294
+Validation Loss: 45.16915604960737
+Epoch 35/50, Loss: 45.1876274824074
+Validation Loss: 44.686874240696724
+Epoch 36/50, Loss: 44.73226464934435
+Validation Loss: 44.181133814594574
+Epoch 37/50, Loss: 44.279497740222844
+Validation Loss: 43.830262407296836
+Epoch 38/50, Loss: 43.89288502577355
+Validation Loss: 43.37794133366232
+Epoch 39/50, Loss: 43.42795827297722
+Validation Loss: 42.901641551633006
+Epoch 40/50, Loss: 43.02745680544796
+Validation Loss: 42.61493188473058
+Epoch 41/50, Loss: 42.649341758489264
+Validation Loss: 42.225332486297496
+Epoch 42/50, Loss: 42.317529094585424
+Validation Loss: 41.91998866232106
+Epoch 43/50, Loss: 42.00403262567424
+Validation Loss: 41.65332404231669
+Epoch 44/50, Loss: 41.717305983204696
+Validation Loss: 41.38764183828621
+Epoch 45/50, Loss: 41.470451876859094
+Validation Loss: 41.212959340479124
+Epoch 46/50, Loss: 41.262231730949324
+Validation Loss: 41.06444221702486
+Epoch 47/50, Loss: 41.08749958950659
+Validation Loss: 40.94085305044441
+Epoch 48/50, Loss: 40.96160829638805
+Validation Loss: 40.86651983871701
+Epoch 49/50, Loss: 40.87911608518282
+Validation Loss: 40.833439696358774
+Epoch 50/50, Loss: 40.83617178462136
+Validation Loss: 40.826368201028814
+Test Loss (smape): 40.824952248039594
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.001, 'num_blocks': 5}
+Epoch 1/50, Loss: 75.5903633658721
+Validation Loss: 61.91182208218658
+Epoch 2/50, Loss: 60.61697474875876
+Validation Loss: 59.120650442311245
+Epoch 3/50, Loss: 59.126551674934014
+Validation Loss: 58.0367736246885
+Epoch 4/50, Loss: 57.86761946435841
+Validation Loss: 57.42168025439271
+Epoch 5/50, Loss: 56.6666625781611
+Validation Loss: 55.99455036050521
+Epoch 6/50, Loss: 55.970030541191356
+Validation Loss: 55.59943975732821
+Epoch 7/50, Loss: 55.513599591798695
+Validation Loss: 54.96690424728284
+Epoch 8/50, Loss: 55.103053204396524
+Validation Loss: 54.66065185069353
+Epoch 9/50, Loss: 54.67676674850775
+Validation Loss: 54.655773254841385
+Epoch 10/50, Loss: 54.34863887133011
+Validation Loss: 54.12257370249211
+Epoch 11/50, Loss: 53.802131902545206
+Validation Loss: 53.077741177712504
+Epoch 12/50, Loss: 53.31111410504061
+Validation Loss: 52.85541197311046
+Epoch 13/50, Loss: 52.97867079928385
+Validation Loss: 52.44853021466729
+Epoch 14/50, Loss: 52.66144025869969
+Validation Loss: 51.54349202285578
+Epoch 15/50, Loss: 52.196285579658394
+Validation Loss: 52.20533796360258
+Epoch 16/50, Loss: 51.922605897310376
+Validation Loss: 51.28988095846732
+Epoch 17/50, Loss: 51.73525151623209
+Validation Loss: 51.35414736537183
+Epoch 18/50, Loss: 51.302445874144354
+Validation Loss: 50.54322141372983
+Epoch 19/50, Loss: 51.14352442073028
+Validation Loss: 50.489563705659
+Epoch 20/50, Loss: 50.71434066229225
+Validation Loss: 50.582161212563
+Epoch 21/50, Loss: 50.45691403376108
+Validation Loss: 49.84451093024781
+Epoch 22/50, Loss: 50.132588057144254
+Validation Loss: 49.42775180618413
+Epoch 23/50, Loss: 49.842586931332136
+Validation Loss: 49.40598924194914
+Epoch 24/50, Loss: 49.463852927016006
+Validation Loss: 49.25549873496622
+Epoch 25/50, Loss: 49.10027974862803
+Validation Loss: 48.6223722447481
+Epoch 26/50, Loss: 48.73383888663008
+Validation Loss: 48.34472836251578
+Epoch 27/50, Loss: 48.29911250668355
+Validation Loss: 47.961110145991604
+Epoch 28/50, Loss: 47.89229527773817
+Validation Loss: 47.276490198070206
+Epoch 29/50, Loss: 47.55141658766531
+Validation Loss: 47.029965474350234
+Epoch 30/50, Loss: 47.14643175890142
+Validation Loss: 46.55726279139074
+Epoch 31/50, Loss: 46.72095600722886
+Validation Loss: 46.13577519070989
+Epoch 32/50, Loss: 46.27254611050093
+Validation Loss: 45.81530872665874
+Epoch 33/50, Loss: 45.82279277114802
+Validation Loss: 45.22395223178913
+Epoch 34/50, Loss: 45.39951152127945
+Validation Loss: 44.67566928540432
+Epoch 35/50, Loss: 44.92855586397761
+Validation Loss: 44.471544816101755
+Epoch 36/50, Loss: 44.504496876960026
+Validation Loss: 43.88389239118183
+Epoch 37/50, Loss: 44.03009851506617
+Validation Loss: 43.61201318406251
+Epoch 38/50, Loss: 43.574561574422795
+Validation Loss: 43.06118598848179
+Epoch 39/50, Loss: 43.18520309553384
+Validation Loss: 42.67853679651506
+Epoch 40/50, Loss: 42.7546458418192
+Validation Loss: 42.27886188122653
+Epoch 41/50, Loss: 42.38423061124422
+Validation Loss: 41.89586486454979
+Epoch 42/50, Loss: 42.03156338181606
+Validation Loss: 41.64333113561647
+Epoch 43/50, Loss: 41.70597796915182
+Validation Loss: 41.35592122533833
+Epoch 44/50, Loss: 41.41943421091391
+Validation Loss: 41.105310903347124
+Epoch 45/50, Loss: 41.16554610180916
+Validation Loss: 40.90701158410203
+Epoch 46/50, Loss: 40.950689280748435
+Validation Loss: 40.74275704919693
+Epoch 47/50, Loss: 40.78488802738721
+Validation Loss: 40.63823429483331
+Epoch 48/50, Loss: 40.658838327404005
+Validation Loss: 40.55918971786477
+Epoch 49/50, Loss: 40.573333729829656
+Validation Loss: 40.526226178962474
+Epoch 50/50, Loss: 40.52920417884216
+Validation Loss: 40.51948284343026
+Test Loss (smape): 40.51708208311588
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.001, 'num_blocks': 7}
+Epoch 1/50, Loss: 75.397699550483
+Validation Loss: 61.219678264905966
+Epoch 2/50, Loss: 60.31674818837913
+Validation Loss: 58.958518335746
+Epoch 3/50, Loss: 58.92792135430861
+Validation Loss: 58.13337909042442
+Epoch 4/50, Loss: 57.88576405930718
+Validation Loss: 56.4719161735401
+Epoch 5/50, Loss: 56.80936102329093
+Validation Loss: 56.066206537510105
+Epoch 6/50, Loss: 56.14929977710515
+Validation Loss: 55.167410784537104
+Epoch 7/50, Loss: 55.78058278721501
+Validation Loss: 55.12831081441857
+Epoch 8/50, Loss: 55.516063480996
+Validation Loss: 54.72755346810239
+Epoch 9/50, Loss: 55.05734820041443
+Validation Loss: 55.09493972992986
+Epoch 10/50, Loss: 54.84540836160087
+Validation Loss: 55.126713675258834
+Epoch 11/50, Loss: 54.12783352821475
+Validation Loss: 53.62651136816147
+Epoch 12/50, Loss: 53.82187207923208
+Validation Loss: 53.14855644561216
+Epoch 13/50, Loss: 53.390396822946634
+Validation Loss: 53.297216291096305
+Epoch 14/50, Loss: 52.934314119381156
+Validation Loss: 52.93162891421892
+Epoch 15/50, Loss: 52.7308425958082
+Validation Loss: 52.79277993289007
+Epoch 16/50, Loss: 52.3089372277294
+Validation Loss: 51.19889397392525
+Epoch 17/50, Loss: 51.87504113586408
+Validation Loss: 51.44930139301222
+Epoch 18/50, Loss: 51.602891179976574
+Validation Loss: 50.887019807704384
+Epoch 19/50, Loss: 51.411699132401814
+Validation Loss: 51.04671225984515
+Epoch 20/50, Loss: 50.978747943677746
+Validation Loss: 50.46633891090045
+Epoch 21/50, Loss: 50.64884052117802
+Validation Loss: 50.40095372163048
+Epoch 22/50, Loss: 50.38854020168273
+Validation Loss: 50.18343930185577
+Epoch 23/50, Loss: 49.99814901809189
+Validation Loss: 49.63468365993713
+Epoch 24/50, Loss: 49.70466656319341
+Validation Loss: 49.11104451874156
+Epoch 25/50, Loss: 49.36963435886853
+Validation Loss: 48.66743321491322
+Epoch 26/50, Loss: 48.925114758426076
+Validation Loss: 48.59845972896272
+Epoch 27/50, Loss: 48.5134324603063
+Validation Loss: 47.906951410894315
+Epoch 28/50, Loss: 48.169152955025936
+Validation Loss: 47.459386910989714
+Epoch 29/50, Loss: 47.715254618523964
+Validation Loss: 47.18047619440964
+Epoch 30/50, Loss: 47.314530629725624
+Validation Loss: 46.74792248388833
+Epoch 31/50, Loss: 46.917709388371485
+Validation Loss: 46.291215962320436
+Epoch 32/50, Loss: 46.42841131345588
+Validation Loss: 45.95659537839712
+Epoch 33/50, Loss: 45.97247790331954
+Validation Loss: 45.36590156095178
+Epoch 34/50, Loss: 45.59285463699485
+Validation Loss: 45.080107826081765
+Epoch 35/50, Loss: 45.17056802809324
+Validation Loss: 44.65005592173144
+Epoch 36/50, Loss: 44.7274294258225
+Validation Loss: 44.205653104910795
+Epoch 37/50, Loss: 44.26525863682508
+Validation Loss: 43.805005998198
+Epoch 38/50, Loss: 43.86323991589871
+Validation Loss: 43.350102476371354
+Epoch 39/50, Loss: 43.41824713144842
+Validation Loss: 42.924084635188855
+Epoch 40/50, Loss: 43.04223844466318
+Validation Loss: 42.52910469880982
+Epoch 41/50, Loss: 42.65386034899527
+Validation Loss: 42.23060726852483
+Epoch 42/50, Loss: 42.312361659450566
+Validation Loss: 41.904428102557354
+Epoch 43/50, Loss: 41.98282960239512
+Validation Loss: 41.6084338190088
+Epoch 44/50, Loss: 41.7075838000823
+Validation Loss: 41.41414315625918
+Epoch 45/50, Loss: 41.4654595202288
+Validation Loss: 41.21054305942655
+Epoch 46/50, Loss: 41.26045986047395
+Validation Loss: 41.03968202140254
+Epoch 47/50, Loss: 41.0921317546011
+Validation Loss: 40.943012719999054
+Epoch 48/50, Loss: 40.97207317193486
+Validation Loss: 40.87134761246258
+Epoch 49/50, Loss: 40.884882164932414
+Validation Loss: 40.838478265806685
+Epoch 50/50, Loss: 40.841631930688315
+Validation Loss: 40.832290858603606
+Test Loss (smape): 40.83107592206483
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.01, 'num_blocks': 3}
+Epoch 1/50, Loss: 64.84624612519633
+Validation Loss: 59.23047994328339
+Epoch 2/50, Loss: 59.33419260511855
+Validation Loss: 59.909499351026135
+Epoch 3/50, Loss: 60.24533985607795
+Validation Loss: 62.25058063459985
+Epoch 4/50, Loss: 61.62448833442576
+Validation Loss: 62.58419168950359
+Epoch 5/50, Loss: 62.516301822361164
+Validation Loss: 62.510906667432806
+Epoch 6/50, Loss: 63.492523916213294
+Validation Loss: 67.04363086447441
+Epoch 7/50, Loss: 64.40385507873307
+Validation Loss: 64.54219237422588
+Epoch 8/50, Loss: 65.42985270826289
+Validation Loss: 65.49477958514915
+Epoch 9/50, Loss: 67.0107267260928
+Validation Loss: 67.14649390024321
+Epoch 10/50, Loss: 68.79042382778329
+Validation Loss: 67.22654683597464
+Epoch 11/50, Loss: 68.53712912205475
+Validation Loss: 72.51742518992044
+Epoch 12/50, Loss: 69.19264957845262
+Validation Loss: 68.47645305005976
+Epoch 13/50, Loss: 68.2431394493241
+Validation Loss: 65.76850733509222
+Epoch 14/50, Loss: 68.39805677393679
+Validation Loss: 72.51382427889145
+Epoch 15/50, Loss: 68.64837337738133
+Validation Loss: 70.7417913464818
+Epoch 16/50, Loss: 68.25196851959798
+Validation Loss: 69.35730547580505
+Early stopping triggered
+Test Loss (smape): 69.35770989339287
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.01, 'num_blocks': 5}
+Epoch 1/50, Loss: 64.87470084143
+Validation Loss: 59.682278299345356
+Epoch 2/50, Loss: 59.571447512078755
+Validation Loss: 59.53765166767568
+Epoch 3/50, Loss: 60.60800952128285
+Validation Loss: 62.69822176906729
+Epoch 4/50, Loss: 62.214860359211606
+Validation Loss: 62.23588700887289
+Epoch 5/50, Loss: 63.23472203340402
+Validation Loss: 62.50567849285466
+Epoch 6/50, Loss: 64.40835120819644
+Validation Loss: 63.686488763511846
+Epoch 7/50, Loss: 65.24279593599962
+Validation Loss: 66.43875732224733
+Epoch 8/50, Loss: 69.32942478224837
+Validation Loss: 69.81414581899016
+Epoch 9/50, Loss: 69.01028452130389
+Validation Loss: 67.39719749777063
+Epoch 10/50, Loss: 69.0498224576588
+Validation Loss: 68.7291159902261
+Epoch 11/50, Loss: 72.04114075429885
+Validation Loss: 71.21423347948476
+Epoch 12/50, Loss: 71.8292274387479
+Validation Loss: 71.98687372089904
+Epoch 13/50, Loss: 71.06829770570373
+Validation Loss: 70.52721312701138
+Epoch 14/50, Loss: 71.72323241604836
+Validation Loss: 71.52934032837756
+Epoch 15/50, Loss: 74.58735381396653
+Validation Loss: 83.4582755937338
+Epoch 16/50, Loss: 81.09129878703185
+Validation Loss: 78.14834108333494
+Epoch 17/50, Loss: 79.16496525144836
+Validation Loss: 81.22049803162935
+Early stopping triggered
+Test Loss (smape): 81.22599139782267
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.01, 'num_blocks': 7}
+Epoch 1/50, Loss: 65.14042667188488
+Validation Loss: 59.44297527452327
+Epoch 2/50, Loss: 59.54806417026569
+Validation Loss: 59.60597984495774
+Epoch 3/50, Loss: 60.65269003316927
+Validation Loss: 62.702597103069614
+Epoch 4/50, Loss: 61.84251043805438
+Validation Loss: 62.065425958230925
+Epoch 5/50, Loss: 62.658805220694575
+Validation Loss: 61.60365160477425
+Epoch 6/50, Loss: 62.83975199026655
+Validation Loss: 62.93439182453446
+Epoch 7/50, Loss: 64.16362799689101
+Validation Loss: 63.042672548559665
+Epoch 8/50, Loss: 65.97522035084543
+Validation Loss: 67.39301035878579
+Epoch 9/50, Loss: 66.49147272452245
+Validation Loss: 67.68176633696292
+Epoch 10/50, Loss: 71.87296410603595
+Validation Loss: 70.26955708764662
+Epoch 11/50, Loss: 76.33390733739134
+Validation Loss: 74.35698588346908
+Epoch 12/50, Loss: 78.23020772745032
+Validation Loss: 74.21520837832551
+Epoch 13/50, Loss: 75.26104126940368
+Validation Loss: 77.4043998893499
+Epoch 14/50, Loss: 76.023830111534
+Validation Loss: 76.99268326935945
+Epoch 15/50, Loss: 78.78154116446281
+Validation Loss: 78.71177799620233
+Epoch 16/50, Loss: 78.16842893632773
+Validation Loss: 77.36756990177003
+Early stopping triggered
+Test Loss (smape): 77.36316939887651
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.1, 'num_blocks': 3}
+Epoch 1/50, Loss: 67.86150912871622
+Validation Loss: 63.716308848939335
+Epoch 2/50, Loss: 66.94199400033001
+Validation Loss: 66.95443829085475
+Epoch 3/50, Loss: 83.1657884462517
+Validation Loss: 105.33169256884443
+Epoch 4/50, Loss: 107.46316142360129
+Validation Loss: 123.53885208379596
+Epoch 5/50, Loss: 122.85599264385301
+Validation Loss: 122.71538604596138
+Epoch 6/50, Loss: 122.73927080196586
+Validation Loss: 122.78091902490529
+Epoch 7/50, Loss: 123.34920264262425
+Validation Loss: 123.21821762685148
+Epoch 8/50, Loss: 123.71698541939686
+Validation Loss: 124.54038786580088
+Epoch 9/50, Loss: 127.48834058973524
+Validation Loss: 133.83273359239016
+Epoch 10/50, Loss: 132.0449988545613
+Validation Loss: 131.59867374136502
+Epoch 11/50, Loss: 130.67134798254187
+Validation Loss: 128.6280005293744
+Epoch 12/50, Loss: 130.12887960297604
+Validation Loss: 130.8291739574151
+Epoch 13/50, Loss: 130.84387345030635
+Validation Loss: 129.58639799299303
+Epoch 14/50, Loss: 132.5322466906959
+Validation Loss: 135.94909661178303
+Epoch 15/50, Loss: 129.25717342485137
+Validation Loss: 127.38658277241622
+Epoch 16/50, Loss: 127.77540683226103
+Validation Loss: 126.71603661886823
+Early stopping triggered
+Test Loss (smape): 126.71819305419922
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.1, 'num_blocks': 5}
+Epoch 1/50, Loss: 68.27637687593297
+Validation Loss: 66.85476184924923
+Epoch 2/50, Loss: 66.44896874768686
+Validation Loss: 68.80357128102787
+Epoch 3/50, Loss: 84.79878163454076
+Validation Loss: 98.59671252478206
+Epoch 4/50, Loss: 98.26593198729698
+Validation Loss: 97.09425441622562
+Epoch 5/50, Loss: 100.70406820826787
+Validation Loss: 107.84631107143038
+Epoch 6/50, Loss: 110.61873885403068
+Validation Loss: 119.64882687731033
+Epoch 7/50, Loss: 119.02242413109279
+Validation Loss: 115.63724829525637
+Epoch 8/50, Loss: 120.19419757887923
+Validation Loss: 124.17838785684626
+Epoch 9/50, Loss: 122.78693116741415
+Validation Loss: 121.87788631407447
+Epoch 10/50, Loss: 122.62653892313377
+Validation Loss: 119.79899138046208
+Epoch 11/50, Loss: 124.6843797484931
+Validation Loss: 122.69276423622676
+Epoch 12/50, Loss: 124.55761467065409
+Validation Loss: 125.1370875894972
+Epoch 13/50, Loss: 124.49690650065945
+Validation Loss: 124.26628352649041
+Epoch 14/50, Loss: 124.9892296737684
+Validation Loss: 120.4922358852127
+Epoch 15/50, Loss: 124.08282412874811
+Validation Loss: 124.77620682564407
+Epoch 16/50, Loss: 125.07988096768918
+Validation Loss: 125.69259980229376
+Early stopping triggered
+Test Loss (smape): 125.69484327473772
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 2, 'lr': 0.1, 'num_blocks': 7}
+Epoch 1/50, Loss: 68.82203107314174
+Validation Loss: 68.12589062612152
+Epoch 2/50, Loss: 70.69886618128734
+Validation Loss: 75.5063353447335
+Epoch 3/50, Loss: 84.59574164982811
+Validation Loss: 89.62939406029972
+Epoch 4/50, Loss: 92.81645320921905
+Validation Loss: 105.62643563388032
+Epoch 5/50, Loss: 177.86262826538962
+Validation Loss: 200.0
+Epoch 6/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 7/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 8/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 9/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 10/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 11/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 12/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 13/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 14/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 15/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 16/50, Loss: 200.0
+Validation Loss: 200.0
+Early stopping triggered
+Test Loss (smape): 200.0
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.001, 'num_blocks': 3}
+Epoch 1/50, Loss: 74.44565272433915
+Validation Loss: 60.92659859187707
+Epoch 2/50, Loss: 60.18015245716359
+Validation Loss: 58.864986045107976
+Epoch 3/50, Loss: 59.0662384690343
+Validation Loss: 58.87745874817263
+Epoch 4/50, Loss: 57.84619380316788
+Validation Loss: 56.506870350822645
+Epoch 5/50, Loss: 56.688252748308116
+Validation Loss: 56.928538450317205
+Epoch 6/50, Loss: 55.908016248643314
+Validation Loss: 55.76521180355785
+Epoch 7/50, Loss: 55.42963333414644
+Validation Loss: 55.59253613989209
+Epoch 8/50, Loss: 55.283220781254556
+Validation Loss: 55.22189774514614
+Epoch 9/50, Loss: 54.87796682904857
+Validation Loss: 54.145491904237645
+Epoch 10/50, Loss: 54.361129023650236
+Validation Loss: 54.90582306604772
+Epoch 11/50, Loss: 53.90420032362126
+Validation Loss: 53.07998069305376
+Epoch 12/50, Loss: 53.44676557218347
+Validation Loss: 52.887085147127145
+Epoch 13/50, Loss: 53.18300067793183
+Validation Loss: 52.06364876163646
+Epoch 14/50, Loss: 52.75649613756371
+Validation Loss: 51.97362325111409
+Epoch 15/50, Loss: 52.48767796707263
+Validation Loss: 52.10339348021164
+Epoch 16/50, Loss: 52.221815659607614
+Validation Loss: 51.7353064684631
+Epoch 17/50, Loss: 51.81128493294509
+Validation Loss: 51.33074699268237
+Epoch 18/50, Loss: 51.56141592228923
+Validation Loss: 50.96925334234947
+Epoch 19/50, Loss: 51.19538869701717
+Validation Loss: 50.566585545152414
+Epoch 20/50, Loss: 50.89983973912456
+Validation Loss: 50.62433628319941
+Epoch 21/50, Loss: 50.58861129064174
+Validation Loss: 49.71604134479953
+Epoch 22/50, Loss: 50.35656617696074
+Validation Loss: 50.071210281280074
+Epoch 23/50, Loss: 49.93417622623449
+Validation Loss: 49.29876372528733
+Epoch 24/50, Loss: 49.635478919722246
+Validation Loss: 49.23384323908685
+Epoch 25/50, Loss: 49.2784792286481
+Validation Loss: 49.04814197289475
+Epoch 26/50, Loss: 48.907664473974734
+Validation Loss: 48.39700286168666
+Epoch 27/50, Loss: 48.493093482386335
+Validation Loss: 48.12317158811023
+Epoch 28/50, Loss: 48.156514860246844
+Validation Loss: 47.511190470285605
+Epoch 29/50, Loss: 47.71036785113685
+Validation Loss: 47.135834798777275
+Epoch 30/50, Loss: 47.34505120440868
+Validation Loss: 46.87864906952842
+Epoch 31/50, Loss: 46.88931130226611
+Validation Loss: 46.2850915819552
+Epoch 32/50, Loss: 46.42360838069472
+Validation Loss: 46.03380481491067
+Epoch 33/50, Loss: 45.97348924002153
+Validation Loss: 45.36987147083441
+Epoch 34/50, Loss: 45.55872131619274
+Validation Loss: 45.02151306682437
+Epoch 35/50, Loss: 45.08903079891287
+Validation Loss: 44.57002955581004
+Epoch 36/50, Loss: 44.67440532823421
+Validation Loss: 44.16121884635424
+Epoch 37/50, Loss: 44.22993255941614
+Validation Loss: 43.683654650990185
+Epoch 38/50, Loss: 43.759620484147575
+Validation Loss: 43.261030719569796
+Epoch 39/50, Loss: 43.35056080189786
+Validation Loss: 42.89016905879618
+Epoch 40/50, Loss: 42.94356858151896
+Validation Loss: 42.5251698971753
+Epoch 41/50, Loss: 42.601668504336565
+Validation Loss: 42.20823285992447
+Epoch 42/50, Loss: 42.199827057857334
+Validation Loss: 41.86915997558033
+Epoch 43/50, Loss: 41.87749688857388
+Validation Loss: 41.60018886289068
+Epoch 44/50, Loss: 41.59548560894668
+Validation Loss: 41.264370291526724
+Epoch 45/50, Loss: 41.33206641300978
+Validation Loss: 41.079970717669696
+Epoch 46/50, Loss: 41.12579660089818
+Validation Loss: 40.910982639050985
+Epoch 47/50, Loss: 40.947266842899325
+Validation Loss: 40.8097736200929
+Epoch 48/50, Loss: 40.819480008309576
+Validation Loss: 40.71918102245785
+Epoch 49/50, Loss: 40.73205676422426
+Validation Loss: 40.684708574740256
+Epoch 50/50, Loss: 40.6876551134984
+Validation Loss: 40.677599992623385
+Test Loss (smape): 40.67585543536265
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.001, 'num_blocks': 5}
+Epoch 1/50, Loss: 76.51818722142524
+Validation Loss: 61.43310971277868
+Epoch 2/50, Loss: 60.40904407900981
+Validation Loss: 59.35546235712376
+Epoch 3/50, Loss: 59.054209746131605
+Validation Loss: 57.87934084291811
+Epoch 4/50, Loss: 58.00253594020917
+Validation Loss: 56.96207377050172
+Epoch 5/50, Loss: 56.7799034501984
+Validation Loss: 56.33830152911904
+Epoch 6/50, Loss: 56.05878397886554
+Validation Loss: 55.24521380459273
+Epoch 7/50, Loss: 55.62141044872984
+Validation Loss: 54.87205863950446
+Epoch 8/50, Loss: 55.29506337036869
+Validation Loss: 54.72084099186107
+Epoch 9/50, Loss: 55.01550042762724
+Validation Loss: 54.645754306781164
+Epoch 10/50, Loss: 54.59962163942147
+Validation Loss: 54.499898495976694
+Epoch 11/50, Loss: 54.102761539412136
+Validation Loss: 53.99809001514085
+Epoch 12/50, Loss: 53.617005913619714
+Validation Loss: 53.515677780383555
+Epoch 13/50, Loss: 53.278239540146096
+Validation Loss: 52.4348179326809
+Epoch 14/50, Loss: 52.86368712590338
+Validation Loss: 53.30694319412621
+Epoch 15/50, Loss: 52.590517835373376
+Validation Loss: 51.6800009820299
+Epoch 16/50, Loss: 52.132562559019924
+Validation Loss: 52.1287351477396
+Epoch 17/50, Loss: 51.8998594954888
+Validation Loss: 51.363503136581436
+Epoch 18/50, Loss: 51.67711206349086
+Validation Loss: 51.67763598691517
+Epoch 19/50, Loss: 51.339128181026
+Validation Loss: 51.110630771397105
+Epoch 20/50, Loss: 50.97053029062828
+Validation Loss: 50.80238474425043
+Epoch 21/50, Loss: 50.71568492196122
+Validation Loss: 50.41921031348431
+Epoch 22/50, Loss: 50.274096127251866
+Validation Loss: 50.023481061258025
+Epoch 23/50, Loss: 49.93811175729432
+Validation Loss: 49.73766169847855
+Epoch 24/50, Loss: 49.63557950374966
+Validation Loss: 49.03929172792963
+Epoch 25/50, Loss: 49.22125822259474
+Validation Loss: 49.119571360506754
+Epoch 26/50, Loss: 48.89205259596381
+Validation Loss: 48.394719060042995
+Epoch 27/50, Loss: 48.482559034888034
+Validation Loss: 48.02320051453355
+Epoch 28/50, Loss: 48.042850624717516
+Validation Loss: 47.690828416459084
+Epoch 29/50, Loss: 47.65471457285064
+Validation Loss: 46.89992761954199
+Epoch 30/50, Loss: 47.22649301019099
+Validation Loss: 46.725456404816036
+Epoch 31/50, Loss: 46.7271172662867
+Validation Loss: 46.21544912317995
+Epoch 32/50, Loss: 46.27563992910196
+Validation Loss: 45.75889455207695
+Epoch 33/50, Loss: 45.89721118051911
+Validation Loss: 45.08241450057576
+Epoch 34/50, Loss: 45.35927326050155
+Validation Loss: 44.784486187418196
+Epoch 35/50, Loss: 44.896871752962106
+Validation Loss: 44.3638261586402
+Epoch 36/50, Loss: 44.420433327003764
+Validation Loss: 43.85155009648391
+Epoch 37/50, Loss: 43.95266411655633
+Validation Loss: 43.384328721139816
+Epoch 38/50, Loss: 43.488205741884514
+Validation Loss: 42.89737124337638
+Epoch 39/50, Loss: 43.0757446272634
+Validation Loss: 42.505314136146986
+Epoch 40/50, Loss: 42.656679085537924
+Validation Loss: 42.16055964191447
+Epoch 41/50, Loss: 42.23979908496595
+Validation Loss: 41.76173853374507
+Epoch 42/50, Loss: 41.86945796444127
+Validation Loss: 41.53224364539997
+Epoch 43/50, Loss: 41.52760072456774
+Validation Loss: 41.148084705669305
+Epoch 44/50, Loss: 41.211206602085056
+Validation Loss: 40.91225679174703
+Epoch 45/50, Loss: 40.964084232603035
+Validation Loss: 40.69828893041049
+Epoch 46/50, Loss: 40.74355834262179
+Validation Loss: 40.53209725379122
+Epoch 47/50, Loss: 40.56112937532962
+Validation Loss: 40.400803329134824
+Epoch 48/50, Loss: 40.429253407055846
+Validation Loss: 40.32295661091702
+Epoch 49/50, Loss: 40.33940596885802
+Validation Loss: 40.28942063468782
+Epoch 50/50, Loss: 40.29298863450652
+Validation Loss: 40.283100073412164
+Test Loss (smape): 40.2808724937089
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.001, 'num_blocks': 7}
+Epoch 1/50, Loss: 77.66668221350206
+Validation Loss: 61.36616284252411
+Epoch 2/50, Loss: 60.420236335073156
+Validation Loss: 59.03302599621887
+Epoch 3/50, Loss: 58.940327394908785
+Validation Loss: 58.81579983580089
+Epoch 4/50, Loss: 57.85890249010821
+Validation Loss: 57.8444885398477
+Epoch 5/50, Loss: 56.71402920863425
+Validation Loss: 56.3025531971417
+Epoch 6/50, Loss: 55.951328900775586
+Validation Loss: 56.29797003497141
+Epoch 7/50, Loss: 55.48558188785331
+Validation Loss: 54.70327236472345
+Epoch 8/50, Loss: 55.192820765593595
+Validation Loss: 55.132320118196866
+Epoch 9/50, Loss: 54.8885442014744
+Validation Loss: 54.21223720010587
+Epoch 10/50, Loss: 54.44291721182995
+Validation Loss: 54.86429400776708
+Epoch 11/50, Loss: 53.97882875546004
+Validation Loss: 53.15363624785229
+Epoch 12/50, Loss: 53.50091198097862
+Validation Loss: 53.02936951853303
+Epoch 13/50, Loss: 53.103976165088056
+Validation Loss: 52.80785702604896
+Epoch 14/50, Loss: 52.80234044261476
+Validation Loss: 52.38828076174504
+Epoch 15/50, Loss: 52.4527365766378
+Validation Loss: 52.16127966136861
+Epoch 16/50, Loss: 52.182489357356054
+Validation Loss: 51.87406256361115
+Epoch 17/50, Loss: 52.00689971895352
+Validation Loss: 51.46566826839266
+Epoch 18/50, Loss: 51.62437565464279
+Validation Loss: 51.0149590335904
+Epoch 19/50, Loss: 51.31426169302078
+Validation Loss: 50.73691569461653
+Epoch 20/50, Loss: 51.05815573721619
+Validation Loss: 50.67601677442535
+Epoch 21/50, Loss: 50.66462791085825
+Validation Loss: 50.55572393780428
+Epoch 22/50, Loss: 50.31025808445517
+Validation Loss: 50.059989889770826
+Epoch 23/50, Loss: 49.93392506352178
+Validation Loss: 49.24261517706802
+Epoch 24/50, Loss: 49.58652429528665
+Validation Loss: 49.03120899665914
+Epoch 25/50, Loss: 49.242002161898355
+Validation Loss: 48.50229193046454
+Epoch 26/50, Loss: 48.87338394178182
+Validation Loss: 48.3313344434661
+Epoch 27/50, Loss: 48.52737067466558
+Validation Loss: 48.354473457916896
+Epoch 28/50, Loss: 48.12001194270767
+Validation Loss: 47.42738227559477
+Epoch 29/50, Loss: 47.671522354621025
+Validation Loss: 47.3118283378301
+Epoch 30/50, Loss: 47.23822403337433
+Validation Loss: 46.709008417559396
+Epoch 31/50, Loss: 46.718460811885514
+Validation Loss: 46.09186270399201
+Epoch 32/50, Loss: 46.25090361339691
+Validation Loss: 45.55192201150549
+Epoch 33/50, Loss: 45.793514988253314
+Validation Loss: 45.348399964277
+Epoch 34/50, Loss: 45.29919335679901
+Validation Loss: 44.740626726963725
+Epoch 35/50, Loss: 44.87224823642044
+Validation Loss: 44.277390726195165
+Epoch 36/50, Loss: 44.40768308308218
+Validation Loss: 43.80291689232852
+Epoch 37/50, Loss: 43.95240578608988
+Validation Loss: 43.38106042148394
+Epoch 38/50, Loss: 43.50781979041985
+Validation Loss: 42.87631896361516
+Epoch 39/50, Loss: 43.05285334251682
+Validation Loss: 42.54486591296397
+Epoch 40/50, Loss: 42.60337163742815
+Validation Loss: 42.0721949151012
+Epoch 41/50, Loss: 42.2058591533248
+Validation Loss: 41.77298566318263
+Epoch 42/50, Loss: 41.84719102121858
+Validation Loss: 41.41720837613067
+Epoch 43/50, Loss: 41.50964652386473
+Validation Loss: 41.119282619247414
+Epoch 44/50, Loss: 41.1964649733818
+Validation Loss: 40.88358102021394
+Epoch 45/50, Loss: 40.92785319904127
+Validation Loss: 40.67276843429946
+Epoch 46/50, Loss: 40.70951478713345
+Validation Loss: 40.4814110755099
+Epoch 47/50, Loss: 40.525176221599466
+Validation Loss: 40.36348631270412
+Epoch 48/50, Loss: 40.39225599336583
+Validation Loss: 40.290401338812195
+Epoch 49/50, Loss: 40.30252350208371
+Validation Loss: 40.25068341237938
+Epoch 50/50, Loss: 40.254374602386534
+Validation Loss: 40.24448405672961
+Test Loss (smape): 40.24314931991997
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.01, 'num_blocks': 3}
+Epoch 1/50, Loss: 64.9738140100725
+Validation Loss: 59.6020736595765
+Epoch 2/50, Loss: 59.42059580813596
+Validation Loss: 60.54568209170337
+Epoch 3/50, Loss: 60.34322795599588
+Validation Loss: 60.7388444922965
+Epoch 4/50, Loss: 61.34523200276868
+Validation Loss: 61.72878308204478
+Epoch 5/50, Loss: 61.95850584461126
+Validation Loss: 64.0555241004578
+Epoch 6/50, Loss: 63.23543767849673
+Validation Loss: 62.48389642032576
+Epoch 7/50, Loss: 64.48619713948918
+Validation Loss: 65.76408959037437
+Epoch 8/50, Loss: 67.75413566850021
+Validation Loss: 68.11254939326534
+Epoch 9/50, Loss: 70.67460729471405
+Validation Loss: 74.76456223278939
+Epoch 10/50, Loss: 76.74290210133546
+Validation Loss: 76.32577836208908
+Epoch 11/50, Loss: 76.18425851384353
+Validation Loss: 77.69484934778073
+Epoch 12/50, Loss: 76.30069725327954
+Validation Loss: 73.43433618778269
+Epoch 13/50, Loss: 76.53512472261686
+Validation Loss: 75.64081539753145
+Epoch 14/50, Loss: 121.0704723394297
+Validation Loss: 96.39496489225569
+Epoch 15/50, Loss: 94.9068001224979
+Validation Loss: 94.07262826328677
+Epoch 16/50, Loss: 93.12777159058633
+Validation Loss: 93.18717327441014
+Early stopping triggered
+Test Loss (smape): 93.19119339689202
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.01, 'num_blocks': 5}
+Epoch 1/50, Loss: 65.34924865118087
+Validation Loss: 60.22099603964548
+Epoch 2/50, Loss: 59.633618939925704
+Validation Loss: 58.827963420244735
+Epoch 3/50, Loss: 60.449858195337455
+Validation Loss: 61.931806747782616
+Epoch 4/50, Loss: 61.82530028074595
+Validation Loss: 61.456591028678424
+Epoch 5/50, Loss: 62.709170858167965
+Validation Loss: 64.03425176698792
+Epoch 6/50, Loss: 64.19728531291216
+Validation Loss: 63.226007577094954
+Epoch 7/50, Loss: 64.52740540943918
+Validation Loss: 63.861656428820915
+Epoch 8/50, Loss: 65.80655399643413
+Validation Loss: 67.11837236052301
+Epoch 9/50, Loss: 67.00447159295379
+Validation Loss: 69.7106160698627
+Epoch 10/50, Loss: 67.80225264324459
+Validation Loss: 64.76640960535646
+Epoch 11/50, Loss: 66.68414917890279
+Validation Loss: 68.46365741967402
+Epoch 12/50, Loss: 68.05032314023443
+Validation Loss: 65.6644910242309
+Epoch 13/50, Loss: 67.29772669386665
+Validation Loss: 67.908157434061
+Epoch 14/50, Loss: 66.9327122208855
+Validation Loss: 65.38652851456307
+Epoch 15/50, Loss: 67.19848888878025
+Validation Loss: 66.85242412763185
+Epoch 16/50, Loss: 67.71177636868578
+Validation Loss: 68.98768174672243
+Epoch 17/50, Loss: 67.48391717389983
+Validation Loss: 67.05898493444512
+Early stopping triggered
+Test Loss (smape): 67.0555839101109
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.01, 'num_blocks': 7}
+Epoch 1/50, Loss: 65.1667144856438
+Validation Loss: 58.870745658600704
+Epoch 2/50, Loss: 59.48557760220576
+Validation Loss: 59.08234817215741
+Epoch 3/50, Loss: 60.46052722235435
+Validation Loss: 61.448509957781475
+Epoch 4/50, Loss: 61.69372932944461
+Validation Loss: 62.88799989137915
+Epoch 5/50, Loss: 62.44903001612779
+Validation Loss: 64.09660258965351
+Epoch 6/50, Loss: 63.47297780827959
+Validation Loss: 63.94478716810578
+Epoch 7/50, Loss: 64.2726131650589
+Validation Loss: 65.25071567356878
+Epoch 8/50, Loss: 65.02343844628149
+Validation Loss: 65.28913944451384
+Epoch 9/50, Loss: 65.77107873128605
+Validation Loss: 67.8510429202706
+Epoch 10/50, Loss: 68.46936160341406
+Validation Loss: 67.94307795482705
+Epoch 11/50, Loss: 69.27030092842305
+Validation Loss: 82.57578556215219
+Epoch 12/50, Loss: 74.49372656551408
+Validation Loss: 73.55969188667186
+Epoch 13/50, Loss: 73.05292252292244
+Validation Loss: 75.39947050205771
+Epoch 14/50, Loss: 71.70876719792136
+Validation Loss: 68.50597630209735
+Epoch 15/50, Loss: 76.37946142699914
+Validation Loss: 78.95182169219594
+Epoch 16/50, Loss: 80.36105027090638
+Validation Loss: 80.46327920059962
+Early stopping triggered
+Test Loss (smape): 80.46278166114737
+Training with parameters: {'batch_size': 16, 'layer_size': 128, 'layers_per_block': 4, 'lr': 0.1, 'num_blocks': 3}
+Epoch 1/50, Loss: 68.3029796831436
+Validation Loss: 65.98286225074945
+Epoch 2/50, Loss: 66.8699599996299
+Validation Loss: 71.70091052935652
+Epoch 3/50, Loss: 107.41452456684316
+Validation Loss: 200.0
+Epoch 4/50, Loss: 199.99999968457283
+Validation Loss: 200.0
+Epoch 5/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 6/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 7/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 8/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 9/50, Loss: 200.0
+Validation Loss: 200.0
+Epoch 10/50, Loss: nan
+Validation Loss: nan
+Traceback (most recent call last):
+  File "/mnt/c/Users/dimit/Desktop/projet_dl/v2n-beats-g.py", line 322, in <module>
+    best_params = grid_search(
+  File "/mnt/c/Users/dimit/Desktop/projet_dl/v2n-beats-g.py", line 243, in grid_search
+    model = train_generic_nbeats(
+  File "/mnt/c/Users/dimit/Desktop/projet_dl/v2n-beats-g.py", line 227, in train_generic_nbeats
+    writer.add_histogram(f'gradients/{name}', param.grad, epoch)
+  File "/home/dimitri/.local/lib/python3.10/site-packages/torch/utils/tensorboard/writer.py", line 499, in add_histogram
+    histogram(tag, values, bins, max_bins=max_bins), global_step, walltime
+  File "/home/dimitri/.local/lib/python3.10/site-packages/torch/utils/tensorboard/summary.py", line 485, in histogram
+    hist = make_histogram(values.astype(float), bins, max_bins)
+  File "/home/dimitri/.local/lib/python3.10/site-packages/torch/utils/tensorboard/summary.py", line 530, in make_histogram       
+    raise ValueError("The histogram is empty, please file a bug report.")
+ValueError: The histogram is empty, please file a bug report.
+dimitri@ZaphosTop:/mnt/c/Users/dimit/Desktop/projet_dl$ 
