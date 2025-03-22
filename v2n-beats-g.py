@@ -143,7 +143,7 @@ class EarlyStopping:
             return False
 
 
-def train_generic_nbeats(dataset, input_size, forecast_size, epochs=100, batch_size=32, lr=0.001, loss_fn='mse'):
+def train_generic_nbeats(dataset, input_size, forecast_size, epochs=200, batch_size=32, lr=0.001, loss_fn='mse'):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     
     # Obtenir le nombre de caractéristiques à partir du premier élément du dataset
@@ -180,6 +180,7 @@ def train_generic_nbeats(dataset, input_size, forecast_size, epochs=100, batch_s
     for epoch in range(epochs):
         model.train()
         epoch_loss = 0
+        iteration = 0  # Initialiser un compteur d'itérations
         
         for x_batch, y_batch in dataloader:
             optimizer.zero_grad()
@@ -198,8 +199,10 @@ def train_generic_nbeats(dataset, input_size, forecast_size, epochs=100, batch_s
             
             # Ajouter le learning rate au TensorBoard
             current_lr = scheduler.get_last_lr()[0]
-            writer.add_scalar('Learning_Rate', current_lr, epoch * len(dataloader) + dataloader._index)
+            writer.add_scalar('Learning_Rate', current_lr, epoch * len(dataloader) + iteration)
             
+            iteration += 1  # Incrémenter le compteur d'itérations
+        
         epoch_loss /= len(dataloader)
         print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss}")
         writer.add_scalar('Loss/train', epoch_loss, epoch)
@@ -283,7 +286,7 @@ if __name__ == "__main__":
         train_dataset, 
         input_size=input_size, 
         forecast_size=forecast_size, 
-        epochs=100, 
+        epochs=200, 
         batch_size=32, 
         lr=0.001, 
         loss_fn='smape'
